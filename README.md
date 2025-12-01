@@ -1,1 +1,1 @@
-Solutions to [https://adventofcode.com/2025]
+Solutions to https://adventofcode.com/2025
