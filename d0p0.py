@@ -6,6 +6,7 @@ filenames = ["sample.txt", "input.txt"]
 
 def main():
     for filename in filenames:
+        print(filename)
         lines = getLines(filename)
         mainFunction(lines)
 
