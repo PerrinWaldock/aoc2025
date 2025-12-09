@@ -34,7 +34,6 @@ def mainFunction(lines):
     circuitSizes = list(reversed(sorted([len(c) for c in circuits])))
     print(np.prod(circuitSizes[:3]))
     
-        
 def findClosestOthers(boxes):
     return {box: orderByClosestTo(box, boxes) for box in boxes}
 

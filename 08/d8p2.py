@@ -25,7 +25,6 @@ def mainFunction(lines):
             relevantCircuits[0].update(c)
             circuits.remove(c)
     print(closest1[0] * closest2[0])
-    
         
 def findClosestOthers(boxes):
     return {box: orderByClosestTo(box, boxes) for box in boxes}
