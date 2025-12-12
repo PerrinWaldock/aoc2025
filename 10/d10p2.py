@@ -66,7 +66,8 @@ def mainFunction(lines):
     buttonPressCounts = []
     for ind, m in enumerate(tqdm(machines)):
         tqdm.write(f"{ind}: {m}")
-        presses = solveWithPulp(m) #solveWithSympy(m)
+        # presses = solveWithPulp(m)
+        presses = solveWithSympy(m)
         pressSum = sum(presses)
         tqdm.write(str(presses))
         tqdm.write(str(pressSum))
@@ -112,7 +113,7 @@ def solveWithSympy(machine: Machine):
     tqdm.write(f"{freevarscount} {maxJoltage}")
     tqdm.write(str(answerExpression))
     
-    return findCorrectAnswer(lambda x: evalFn(*x), np.arange(maxJoltage+1), freevarscount)
+    return findCorrectAnswer(lambda x: [round(n) for n in evalFn(*x)], np.arange(maxJoltage+1), freevarscount)
 
 #TODO try solving with PULP
 def solveWithPulp(machine: Machine):
